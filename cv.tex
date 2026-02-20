@@ -1,0 +1,112 @@
+\documentclass[11pt, letterpaper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[top=0.55in, bottom=0.55in, left=0.65in, right=0.65in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+
+% Colors
+\definecolor{accent}{HTML}{333333}
+\definecolor{subtle}{HTML}{999999}
+
+% Section formatting
+\titleformat{\section}
+  {\normalfont\small\scshape\color{accent}}
+  {}{0em}{}[\vspace{-4pt}{\color{subtle!50}\rule{\textwidth}{0.2pt}}]
+\titlespacing{\section}{0pt}{8pt}{3pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\pagestyle{empty}
+
+\begin{document}
+
+% ---- HEADER ----
+\begin{center}
+  {\large\bfseries Brian N. White} \\[3pt]
+  {\small\color{subtle}
+    \href{mailto:bnw@unc.edu}{bnw@unc.edu} \quad
+    \href{https://briannathanwhite.github.io}{briannathanwhite.github.io} \quad
+    \href{https://github.com/briannathanwhite}{github} \quad
+    \href{https://www.linkedin.com/in/briannathanwhite}{linkedin}
+  }
+\end{center}
+
+\section{education}
+
+\textbf{Ph.D., Statistics \& Operations Research} \hfill Expected 2026 \\
+{\color{subtle}University of North Carolina at Chapel Hill} \\
+{\small Dissertation: \emph{Forecasting Spatial Extremes Under Climate Change}. Advisor: Richard Smith.}
+
+\vspace{3pt}
+
+\textbf{M.A., Mathematical Statistics} \hfill 2020 \\
+{\color{subtle}Wake Forest University $\cdot$ Full scholarship with stipend}
+
+\vspace{3pt}
+
+\textbf{B.A., Environmental Studies (Ecology)} \hfill 2018 \\
+{\color{subtle}University of North Carolina at Asheville}
+
+\section{experience}
+
+\textbf{Biostatistician III} \hfill 2022 -- Present \\
+{\color{subtle}Wake Forest School of Medicine, Dept.\ of Biostatistics \& Data Science} \\
+{\small Opioid misuse surveillance: implementing and contributing to the development of Bayesian models that integrate fragmented data sources across spatial and temporal scales to estimate the size of hidden populations, and working with state health departments to turn these estimates into operational tools. Supported by NIDA R01DA052214 (MPIs: Kline, Hepler). NIH LEAP trial: experimental design and analysis for anti-obesity medication RCT. Clinical collaboration across surgery, pediatrics, gerontology, and gastroenterology. Causal inference on observational EHR data.}
+
+\vspace{3pt}
+
+\textbf{Graduate Research Assistant} \hfill 2020 -- Present \\
+{\color{subtle}University of North Carolina at Chapel Hill} \\
+{\small Forecasting extreme coastal water levels across climate scenarios by fusing physics-based ocean simulations with historical tide gauge observations via scalable Gaussian processes.}
+
+\vspace{3pt}
+
+\textbf{Graduate Teaching Assistant} \hfill 2018 -- Present \\
+{\color{subtle}UNC Chapel Hill \& Wake Forest University} \\
+{\small Machine Learning, Statistical Modeling, Biostatistics, Data Analysis, Discrete Mathematics, Regression.}
+
+\section{skills}
+
+{\small
+\textbf{Foundations:} Measure-theoretic probability, asymptotic theory, stochastic processes, optimization, real and functional analysis \\[1pt]
+\textbf{Methods:} Bayesian hierarchical modeling, MCMC, spatial/spatiotemporal statistics, extreme value theory, Gaussian processes, causal inference, experimental design, survival analysis, mixed models \\[1pt]
+\textbf{Computing:} Python, R, PyTorch, Stan, JAGS, SQL, \LaTeX, Git, Linux, HPC/Slurm
+}
+
+\section{publications}
+
+{\footnotesize
+\begin{enumerate}[leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=0pt]
+  \item \textbf{White}, Blanton, Luettich, Smith. Fusing sparse observations and dense simulations for spatial extreme value analysis: Application to U.S.\ coastal sea levels. \emph{In preparation.}
+  \item \textbf{White}, Blanton, Luettich, Smith. Forecasting spatial extremes under climate change: Sea surface temperature as a physically projectable covariate for coastal flood risk. \emph{In preparation.}
+  \item Young, Rives, Gudzune, Jaeger, Simmons, \textbf{White}, et al. The long-term effectiveness of the anti-obesity medication phentermine (LEAP) trial: Rationale, design, and baseline characteristics. \emph{Contemporary Clinical Trials}, 2026.
+  \item Jeong, Edmunds, McCollum, \textbf{White}, Clayton. Lower mean nocturnal baseline impedance in erosive reflux disease, Barrett's Esophagus, and elevated body mass index compared to nonerosive reflux disease. \emph{Diseases of the Esophagus}, 2026.
+  \item Kline, \textbf{White}, Lancaster, et al. Estimating prevalence of opioid misuse in North Carolina counties from 2016--2021: An integrated abundance model approach. \emph{Epidemiology}, 2025.
+  \item Lippert, Callahan, \textbf{White}, et al. Hospitalist and ``SNFist'' clinician perspectives on frailty assessment of rehab patients. \emph{Journal of General Internal Medicine}, 2025.
+  \item Semelka, \textbf{White}, Callahan, Pajewski. The association of frailty with post-hospital discharge location and health outcomes. \emph{Journal of the American Geriatrics Society}, 2025.
+  \item Heeren, Ruddiman, Simmons, \textbf{White}, et al. Application of the Lancet Commission criteria for the diagnosis of obesity to a clinical trials population: The LEAP trial. \emph{Obesity}, 2025.
+  \item Krakovski, Madigan, Cecil, \textbf{White}, et al. Patient factors contributing to wireless pH monitoring intolerance. \emph{Journal of Clinical Gastroenterology}, 2025.
+  \item Brown, \textbf{White}, Hanchate, et al. Short term health outcomes of the Weaver fertilizer plant fire on the surrounding community. \emph{Journal of Public Health Management \& Practice}, 2025.
+  \item Estadt, \textbf{White}, Ricks, et al. The impact of fentanyl on state- and county-level psychostimulant and cocaine overdose death rates by race in Ohio from 2010 to 2020: A time series and spatiotemporal analysis. \emph{Harm Reduction Journal}, 2024.
+  \item Khanna, Banga, Rigdon, \textbf{White}, et al. Role of continuous pulse oximetry and capnography monitoring in the prevention of postoperative respiratory failure, postoperative opioid-induced respiratory depression and adverse outcomes on hospital wards: A systematic review and meta-analysis. \emph{Journal of Clinical Anesthesia}, 2024.
+  \item Kipp, Vesely, Lance, \textbf{White}, et al. Age influence on total ankle arthroplasty outcomes: A systematic review. \emph{Journal of Foot and Ankle Surgery}, 2024.
+  \item Vesely, Kipp, Lance, \textbf{White}, et al. BMI influence on total ankle arthroplasty outcomes: A systematic review. \emph{Foot \& Ankle Surgery: Techniques, Reports \& Cases}, 2024.
+  \item Fabian, Adkins, \textbf{White}, et al. Temporal trends in BAHA softband wear time among pediatric patients. \emph{International Journal of Pediatric Otorhinolaryngology}, 2024.
+\end{enumerate}
+}
+
+\section{presentations}
+
+{\footnotesize
+\textbf{White}, Hepler, Hu, Jetson, Xiong, Smith, Delcher, Kline. Estimation of the prevalence of opioid misuse in Washington State counties, 2017--2023: A Bayesian spatiotemporal abundance model approach. Wake Forest Public Health Staff Science Day, 2025. Poster \& Ignite talk (selected from ${\sim}$100 applicants). \\[2pt]
+\textbf{White}, Blanton, Luettich, Smith. Combining observational and model data for spatial extremes through a multivariate Gaussian latent process. 14th International Conference on Extreme Value Analysis (EVA 2025). Poster.
+}
+
+\vspace{6pt}
+\noindent{\footnotesize\color{subtle} Classical piano background (Shepherd School of Music, Rice). Student of the Taubman approach.}
+
+\end{document}
