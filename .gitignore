@@ -2,3 +2,9 @@ archive
 cv.aux
 cv.log
 cv.out
+
+# Large media files
+*.MP4
+*.mp4
+*.mov
+*.MOV

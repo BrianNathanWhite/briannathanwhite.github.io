@@ -43,6 +43,11 @@
         footer a { color: #999; text-decoration: none; }
         footer a:hover { color: #111; }
         footer span { margin: 0 0.75rem; }
+        .video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 1rem 0; }
+        .video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        .piece-title { font-size: 14px; font-weight: 500; margin-bottom: 0.25rem; }
+        .piece-detail { font-size: 13px; color: #666; margin-bottom: 0.5rem; }
+        .piece-detail strong { color: #111; font-weight: 500; }
         @media (max-width: 600px) { body { padding: 2rem 1.5rem; } nav a { display: block; margin: 0.5rem 0; } .vis-canvas { height: 90px; } }
     </style>
 </head>
@@ -60,8 +65,8 @@
                 <a href="#research">research</a>
                 <a href="#publications">publications</a>
                 <a href="#presentations">presentations</a>
+                <a href="#piano">piano</a>
                 <a href="#contact">contact</a>
-                <a href="#etc">etc</a>
             </nav>
         </header>
 
@@ -113,11 +118,23 @@
         </section>
 
 
-        <section id="etc">
-            <h2>etc</h2>
-            <p class="teaching-item">Classical piano background (Shepherd School, Rice). Student of the <a href="https://www.golandskyinstitute.org/" style="color: #666; text-decoration: none; border-bottom: 1px solid #ddd;">Taubman approach</a>. Interested in <a href="https://engineering.stanford.edu/news/ai-could-help-reduce-injury-risk-pianists" style="color: #666; text-decoration: none; border-bottom: 1px solid #ddd;">generative modeling of ergonomic piano technique</a> and <a href="https://transformer-circuits.pub/" style="color: #666; text-decoration: none; border-bottom: 1px solid #ddd;">mechanistic interpretability</a>.</p>
-            <p class="teaching-item"><a href="https://briannathanwhite.github.io/composer-network-analysis/" style="color: #666; text-decoration: none; border-bottom: 1px solid #ddd;">Composer Connections</a> - an interactive network graph of 182 documented meetings between 71 composers, with geographic mapping, timeline playback, and audio samples.</p>
+        <section id="piano">
+            <h2>Piano</h2>
+            <p class="teaching-item">Classical piano background (<a href="https://music.rice.edu/" style="color: #666; text-decoration: none; border-bottom: 1px solid #ddd;">Shepherd School</a>, Rice). Student of the <a href="https://www.golandskyinstitute.org/" style="color: #666; text-decoration: none; border-bottom: 1px solid #ddd;">Taubman approach</a>. Interested in <a href="https://engineering.stanford.edu/news/ai-could-help-reduce-injury-risk-pianists" style="color: #666; text-decoration: none; border-bottom: 1px solid #ddd;">generative modeling of ergonomic piano technique</a>.</p>
 
+            <div style="margin-top: 1.5rem;">
+                <div class="piece-title">Scriabin — Étude in E major, Op. 8, No. 5 (1894)</div>
+                <p class="piece-detail">Marked <em>Brioso</em> — spirited, lively. One of twelve études from Scriabin's Op. 8, composed when he was twenty-two and still deeply under Chopin's influence. The set balances virtuoso technique with lyrical intent: études as character pieces, not just exercises. No. 5, like its neighbors Nos. 2 and 4, never lets the fingerwork eclipse the singing line. Wide-spanned chords — tenths and beyond — give the writing a fullness that belies its brevity.</p>
+                <p class="piece-detail"><strong>Progress (Feb 2026):</strong> About a month of work. This is the first clean playthrough — a foundation to build on.</p>
+                <p class="piece-detail"><strong>Technique:</strong> The main solution I found was redistributing notes between the hands, letting them help each other to allow for quickness and minimize the large leaps any single hand has to make.</p>
+                <div class="video-wrap">
+                    <iframe src="https://www.youtube.com/embed/Z6YmPE45U7Q" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div style="margin-top: 1.5rem;">
+                <p class="teaching-item"><a href="https://briannathanwhite.github.io/composer-network-analysis/" style="color: #666; text-decoration: none; border-bottom: 1px solid #ddd;">Composer Connections</a> — an interactive network graph of 182 documented meetings between 71 composers, with geographic mapping, timeline playback, and audio samples.</p>
+            </div>
         </section>
 
         <footer id="contact">
