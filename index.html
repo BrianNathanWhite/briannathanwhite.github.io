@@ -232,49 +232,14 @@
     const bC=[{a:.5,b:.5},{a:2,b:5},{a:2,b:2},{a:5,b:2},{a:5,b:1}];
     function v5(el,mx){return drawDen(el,mx,bC,0.01,0.99,(x,c)=>bPDF(x,c.a,c.b),250,1800);}
 
-    /* 6 binomial */
-    function binPMF(k,n,p){if(k<0||k>n||k!==Math.floor(k))return 0;let lc=0;for(let i=1;i<=k;i++)lc+=Math.log(n-k+i)-Math.log(i);return Math.exp(lc+k*Math.log(p)+(n-k)*Math.log(1-p));}
-    const biC=[{n:20,p:0.1},{n:20,p:0.3},{n:20,p:0.5},{n:20,p:0.7},{n:20,p:0.9}];
-    function v6(el,mx){
-        const d=D();ctx.clearRect(0,0,d.w,d.h);ax(d);const xMax=20;tk(d,0,xMax,5);
-        let yM=0;for(const c of biC)for(let k=0;k<=xMax;k++){const v=binPMF(k,c.n,c.p);if(v>yM)yM=v;}
-        yM*=1.15;
-        for(let i=biC.length-1;i>=0;i--){const pr=Math.max(0,Math.min(1,(el-i*250)/1800));if(pr<=0)continue;
-        const maxK=Math.floor(ease(pr)*xMax);ctx.globalAlpha=Math.min(1,pr*2);ctx.fillStyle=P[i%5];
-        const bw=Math.max(1,(d.pW/xMax)*0.6);
-        for(let k=0;k<=maxK;k++){const px=d.pL+(k/xMax)*d.pW,h=binPMF(k,biC[i].n,biC[i].p)/yM*d.pH;
-        ctx.fillRect(px-bw/2,d.pT+d.pH-h,bw,h);}ctx.globalAlpha=1;}
-        if(xh(d,mx)){const kV=Math.round((mx-d.pL)/d.pW*xMax);
-        for(let i=0;i<biC.length;i++){const h=binPMF(kV,biC[i].n,biC[i].p)/yM*d.pH;dt(d.pL+(kV/xMax)*d.pW,d.pT+d.pH-h,P[i%5]);}
-        lb(mx,d,'k='+kV);}
-        return el>(biC.length-1)*250+1800;}
-
-    /* 7 poisson */
-    function poisPMF(k,lam){if(k<0||k!==Math.floor(k))return 0;let lg=0;for(let i=2;i<=k;i++)lg+=Math.log(i);return Math.exp(k*Math.log(lam)-lam-lg);}
-    const poC=[{lam:1},{lam:3},{lam:5},{lam:10},{lam:20}];
-    function v7(el,mx){
-        const d=D();ctx.clearRect(0,0,d.w,d.h);ax(d);tk(d,0,35,5);
-        const xA=0,xB=35;let yM=0;
-        for(const c of poC)for(let k=0;k<=34;k++){const v=poisPMF(k,c.lam);if(v>yM)yM=v;}
-        yM*=1.15;
-        for(let i=poC.length-1;i>=0;i--){const pr=Math.max(0,Math.min(1,(el-i*250)/1800));if(pr<=0)continue;
-        const maxK=Math.floor(ease(pr)*34);ctx.globalAlpha=Math.min(1,pr*2);ctx.fillStyle=P[i%5];
-        const bw=Math.max(1,(d.pW/35)*0.6);
-        for(let k=0;k<=maxK;k++){const px=d.pL+(k/34)*d.pW,h=poisPMF(k,poC[i].lam)/yM*d.pH;
-        ctx.fillRect(px-bw/2,d.pT+d.pH-h,bw,h);}ctx.globalAlpha=1;}
-        if(xh(d,mx)){const kV=Math.round((mx-d.pL)/d.pW*34);
-        for(let i=0;i<poC.length;i++){const h=poisPMF(kV,poC[i].lam)/yM*d.pH;dt(d.pL+(kV/34)*d.pW,d.pT+d.pH-h,P[i%5]);}
-        lb(mx,d,'k='+kV);}
-        return el>(poC.length-1)*250+1800;}
-
-    /* 8 mixture */
+    /* 6 mixture */
     const mC=[{w:[1],m:[0],s:[1]},{w:[.5,.5],m:[-1.5,1.5],s:[.7,.7]},{w:[.3,.7],m:[-2,1],s:[.5,1]},{w:[.4,.35,.25],m:[-2,.5,3],s:[.6,.5,.4]},{w:[.25,.25,.25,.25],m:[-3,-1,1,3],s:[.45,.45,.45,.45]}];
     function mixPDF(x,c){let s=0;for(let i=0;i<c.w.length;i++)s+=c.w[i]*nPDF(x,c.m[i],c.s[i]);return s;}
-    function v8(el,mx){return drawDen(el,mx,mC,-5,5,(x,c)=>mixPDF(x,c),250,1800);}
+    function v6(el,mx){return drawDen(el,mx,mC,-5,5,(x,c)=>mixPDF(x,c),250,1800);}
 
-    /* 9 logistic */
+    /* 7 logistic */
     const lC=[{k:.5,x0:0},{k:1,x0:0},{k:2,x0:0},{k:4,x0:0},{k:8,x0:0}];
-    function v9(el,mx){
+    function v7(el,mx){
         const d=D();ctx.clearRect(0,0,d.w,d.h);ax(d);tk(d,-6,6,2);
         dash(d,d.pT+d.pH*0.5);
         for(let i=lC.length-1;i>=0;i--){const c=lC[i],pr=Math.max(0,Math.min(1,(el-i*250)/1800)),vis=Math.floor(ease(pr)*d.pW);if(vis<2)continue;
@@ -283,10 +248,10 @@
         if(xh(d,mx)){const xV=-6+((mx-d.pL)/d.pW)*12;for(let i=0;i<lC.length;i++){const y=sigm(xV,lC[i].k,lC[i].x0);dt(mx,d.pT+d.pH*(1-y),P[i%5]);}lb(mx,d,'x='+xV.toFixed(1));}
         return el>(lC.length-1)*250+1800;}
 
-    /* 10 ou */
+    /* 8 ou */
     let _ou=null;
     function mkOU(){const n=200,dt=0.05,th=2,sig=1,ps=[];for(let p=0;p<5;p++){const ys=[rn()*1.5];for(let i=1;i<=n;i++){const prev=ys[i-1];ys.push(prev+th*(0-prev)*dt+sig*Math.sqrt(dt)*rn());}ps.push(ys);}return ps;}
-    function v10(el,mx){if(!_ou)_ou=mkOU();return drawEns(el,mx,_ou,180,2200,10,null);}
+    function v8(el,mx){if(!_ou)_ou=mkOU();return drawEns(el,mx,_ou,180,2200,10,null);}
 
 
 
@@ -297,11 +262,9 @@
         {fn:v3,  cap:'t(\u03bd) \u00b7 Student-t',               re:null},
         {fn:v4,  cap:'GEV(\u03bc, \u03c3, \u03be)',          re:null},
         {fn:v5,  cap:'Beta(\u03b1, \u03b2)',                 re:null},
-        {fn:v6,  cap:'Bin(n, p)',                          re:null},
-        {fn:v7,  cap:'Pois(\u03bb)',                        re:null},
-        {fn:v8,  cap:'mixture of normals',                    re:null},
-        {fn:v9,  cap:'\u03c3(x) \u00b7 sigmoid / ilogit',    re:null},
-        {fn:v10, cap:'Ornstein\u2013Uhlenbeck',              re(){_ou=mkOU();}},
+        {fn:v6,  cap:'mixture of normals',                    re:null},
+        {fn:v7,  cap:'\u03c3(x) \u00b7 sigmoid / ilogit',    re:null},
+        {fn:v8,  cap:'Ornstein\u2013Uhlenbeck',              re(){_ou=mkOU();}},
     ];
 
     let idx=Math.floor(Math.random()*viz.length),cur=viz[idx],t0=null,mx=-1,raf=null;
