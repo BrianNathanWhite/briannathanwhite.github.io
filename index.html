@@ -102,9 +102,20 @@
         .piece-detail { font-size: 14px; color: #666; margin-bottom: 0.5rem; font-weight: 300; }
         .piece-detail strong { color: #111; font-weight: 500; }
 
+        .mobile-photo {
+            display: none;
+            width: 140px;
+            height: 180px;
+            border-radius: 4px;
+            object-fit: cover;
+            object-position: center 20%;
+            margin: 0 auto 1.5rem auto;
+        }
+
         /* --- Mobile: hide sidebar entirely, show normal site --- */
         @media (max-width: 768px) {
             .sidebar { display: none; }
+            .mobile-photo { display: block; }
             .main { padding: 2rem 1.5rem; }
             .vis-canvas { height: 90px; }
             header nav { display: block; }
@@ -137,6 +148,7 @@
 
         <main class="main">
             <header>
+                <img class="mobile-photo" src="olympic.JPG" alt="Brian N. White">
                 <h1>Brian N. White</h1>
                 <p class="bio">
                     Biostatistician @ <a href="https://school.wakehealth.edu/departments/biostatistics-and-data-science">Wake Forest School of Medicine</a><br>
