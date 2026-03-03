@@ -102,26 +102,20 @@
         .piece-detail { font-size: 14px; color: #666; margin-bottom: 0.5rem; font-weight: 300; }
         .piece-detail strong { color: #111; font-weight: 500; }
 
-        .mobile-banner {
+        .mobile-photo {
             display: none;
-            align-items: center;
-            gap: 1.25rem;
-            padding: 1.5rem;
-            border-bottom: 1px solid #eee;
-        }
-        .mobile-banner-photo {
-            width: 90px;
-            height: 110px;
+            width: 140px;
+            height: 180px;
             border-radius: 4px;
             object-fit: cover;
             object-position: center 20%;
-            flex-shrink: 0;
+            margin: 0 auto 1.5rem auto;
         }
 
         /* --- Mobile: hide sidebar entirely, show normal site --- */
         @media (max-width: 768px) {
             .sidebar { display: none; }
-            .mobile-banner { display: flex; }
+            .mobile-photo { display: block; }
             .main { padding: 2rem 1.5rem; }
             .vis-canvas { height: 90px; }
             header nav { display: block; }
@@ -152,17 +146,9 @@
             </div>
         </aside>
 
-        <div class="mobile-banner">
-            <img class="mobile-banner-photo" src="olympic.JPG" alt="Brian N. White">
-            <div>
-                <h1 style="font-size:16px;font-weight:500;margin-bottom:0.4rem;letter-spacing:0.02em;">Brian N. White</h1>
-                <p style="color:#666;font-weight:300;font-size:13px;line-height:1.5;">Biostatistician @ <a href="https://school.wakehealth.edu/departments/biostatistics-and-data-science" style="color:#666">Wake Forest</a><br>Stats PhD candidate @ <a href="https://stor.unc.edu/" style="color:#666">UNC Chapel Hill</a></p>
-                <p style="color:#999;font-size:11px;margin-top:0.3rem;letter-spacing:0.02em;font-weight:300;">spatial statistics · extreme value theory · data fusion · Bayesian inference</p>
-            </div>
-        </div>
-
         <main class="main">
             <header>
+                <img class="mobile-photo" src="olympic.JPG" alt="Brian N. White">
                 <h1>Brian N. White</h1>
                 <p class="bio">
                     Biostatistician @ <a href="https://school.wakehealth.edu/departments/biostatistics-and-data-science">Wake Forest School of Medicine</a><br>
