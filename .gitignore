@@ -7,5 +7,9 @@ cv.out
 *.MP4
 *.mp4
 *.mov
-*.MOVshortlist/
+*.MOV
+shortlist/
 mockups/
+
+# Local CV copy for applications (keep out of the public repo)
+Brian_White_CV.pdf
