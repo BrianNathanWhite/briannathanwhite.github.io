@@ -8,6 +8,9 @@ cv.out
 *.mp4
 *.mov
 *.MOV
+
+# Loose audio exports in the repo root (site copies live in audio/)
+/*.m4a
 shortlist/
 mockups/
 
