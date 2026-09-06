@@ -22,6 +22,8 @@
         p { margin-bottom: 0.75rem; }
         a { color: #1a0dab; }
         a:hover { text-decoration: underline; }
+        .sep { border: 0; border-top: 1px solid #d3d3d3; margin: 2rem 0 1rem; }
+        .lead { font-size: 14px; color: #777; margin-bottom: 1rem; }
         .pub-item { margin-bottom: 0.75rem; }
         .pub-item .title { font-style: italic; }
         .footer { background: #f5f5f5; border-top: 1px solid #d3d3d3; padding: 1.5rem 2rem; text-align: center; font-size: 13px; color: #999; }
@@ -45,6 +47,30 @@
 
     <div class="content">
         <h1>Publications</h1>
+
+        <h3 id="selected">Selected research</h3>
+        <p class="lead">Three projects that show the through-line: combining data across sources and spatial scales to estimate quantities that are rarely observed directly.</p>
+        <div class="pub-item">
+            <strong>Coastal extremes and data fusion.</strong> Fusing sparse tide gauge records with dense hydrodynamic simulations to estimate spatial return levels along the U.S. coast.
+            [<a href="https://arxiv.org/abs/2603.03247">arXiv</a>]
+            [<a href="https://github.com/BrianNathanWhite/evfuse">code</a>]
+        </div>
+        <div class="pub-item">
+            <strong>Opioid misuse prevalence.</strong> An integrated abundance model that combines multiple data sources to estimate county-level prevalence of opioid misuse, a population that is never directly observed.
+            [<a href="https://doi.org/10.1097/EDE.0000000000001838">Epidemiology</a>]
+        </div>
+        <div class="pub-item">
+            <strong>Spatiotemporal overdose patterns.</strong> How fentanyl changed psychostimulant and cocaine overdose death rates by race across Ohio counties, 2010&ndash;2020.
+            [<a href="https://doi.org/10.1186/s12954-024-00936-9">Harm Reduction Journal</a>]
+            [<a href="https://github.com/BrianNathanWhite/OH_polyaddiction">code</a>]
+        </div>
+
+        <h3>Software</h3>
+        <div class="pub-item">
+            <strong><a href="https://github.com/BrianNathanWhite/evfuse">evfuse</a></strong>: R package implementing the two-stage fusion framework for spatial extreme value analysis.
+        </div>
+
+        <hr class="sep">
 
         <h3>Manuscripts</h3>
         <div class="pub-item">
